@@ -1,0 +1,76 @@
+
+Here are weather app requirements  - 
+
+There are 3 different views - should be a single page application
+
+View # 1
+1.   See the attached drawing of the page 
+2.   User will enter a zip code and press Add 
+3.   That zip code city should be shown in the list below with current weather (temperature and image for raining/cloudy/sunny/windy)
+4.    User will keep entering more zip codes (one by one) and keep the list of cities of interest displayed
+5.    In the list, there will be a X on the left of city name => if the X is clicked, that city will be deleted from the list
+
+For now, don't worry about user profile, auth requirements
+Just focus on highlighted view 1,2,3 requirements.
+
+For now, in view # 1, ignore Save button and Login/Register link
+Just put that Save button and Login/Register link but they won't do anything
+We will visit it once this 1st phase of view 1-2-3 are done
+
+you may need to consume this API to get weather data
+https://openweathermap.org/api
+
+you may run into CORS, 
+solution: to avoid it, you should use node.js server to send your REST call from web page to your front-end node.js server where model will make REST client call to above API.
+
+CORS happens when a REST client call (ajax call) is made from browser to a server that's not in same domain as the browser's web page that's making request
+CORS never happens when server side impl of any domain calls any other domain
+
+To avoid it, we use proxy pattern - which is
+web page making request makes request to same server that's serving that page, 
+that same server will make actual REST call there by avoiding CORS situation of browser calling other domain
+
+copy rainy, windy, sunny, cloudy images for weather.com and use in your app
+
+View # 2
+6.    In first view, all city names should be clickable
+       When a city name is clicked, next 10 days forecast should be shown - this is view # 2 
+       view 2 should have a back button - Pressing back takes to view # 1
+
+View # 3
+7.    That second view should have link for hourly forecast for next 12 hr
+        if that's clicked, hourly forecast for next 12 hr should be shown - this is view # 3
+       view 3 should have a back button - Pressing back takes to view # 1
+
+User profile, auth requirements
+1.    For an unregistered/non-logged-in user - when user closes browser and reopens same site again, the list will be empty
+2.    If user is logged in, user can press "save" to save the list in his/her profile
+3.    Next time the logged in user opens browser, the saved list should be auto-loaded
+4.    When a non-logged-in user presses "save", it should show Login window
+5.    Login should be Google account based authentication
+6.    If the user is logging in with a Google account first time, the profile should be created
+7.    If a logged in user is adding more cities to list, they won't be auto-saved --- save button must be pressed
+        e.g. if user has 2 cities in saved list and adds 3 more to displayed list i.e. total 5, but forgets to press save. 
+               Next time browser is opened on this site, saved 2 cities are shown === not 5
+______________________________________________________________________________________________
+
+
+
+
+
+Fake Ajax callL
+From here: 
+https://stackoverflow.com/questions/5272698/how-to-fake-jquery-ajax-response
+
+
+IMPL:
+  function ajax_response(response) {
+    var deferred = $.Deferred().resolve(response);
+    return deferred.promise();
+  }
+Usage:
+  $.ajax = ajax_response([1, 2, 3]);
+  $.ajax('GET', 'some/url/i/fancy').done(function(data) {
+     console.log(data); // [1, 2, 3]
+  });
+

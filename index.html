@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Your City's Weather | Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="SV" />
+    <meta
+      name="keywords"
+      content="weather, weather city, know weather for city, city"
+    />
+    <meta name="description" content="Weather Application" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Weather Application</span></h1>
+        </div>
+        <nav>
+          <button type="submit" class="LoginRegisterBtn">
+            Login/Register
+          </button>
+        </nav>
+      </div>
+    </header>
+    <section id="mainForm">
+      <div id="searchContainer">
+        <h3>Enter Zipcode</h3>
+        <input id="searchInput" class="searchControl" type="number" />
+        <button id="searchBtn" type="submit" class="addBtn">Add</button>
+        <div id="errorZip"></div>
+      </div>
+      <div id="weatherContainer"></div>
+    </section>
+    <footer>
+      <p>Weather Application, Copyright &copy; 2019</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

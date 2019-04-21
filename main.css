@@ -1,0 +1,155 @@
+body {
+  font: 15px Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/*---Header Starts---*/
+
+header {
+  background: #35424a;
+  color: #ffffff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #5b85a1 30px solid;
+}
+
+header #branding {
+  float: left;
+}
+
+header #branding h1 {
+  margin: 0;
+}
+
+header .highlight {
+  color: #369fe6;
+  font-weight: bold;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+}
+
+.LoginRegisterBtn {
+  height: 38px;
+  background: #369fe6;
+  border: 0;
+  border-radius: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+/*---Header Ends---*/
+
+/*---Main Form Starts ---*/
+
+#mainForm h3 {
+  float: left;
+  width: 100%;
+  margin-left: 150px;
+}
+
+#mainForm input[type="number"] {
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+  margin-bottom: 5px;
+  margin-left: 150px;
+  margin-right: 25px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#errorZip {
+  color: red;
+  font-size: normal;
+  display: inline;
+  float: none;
+  position: absolute;
+  margin: 3px;
+}
+.addBtn {
+  height: 35px;
+  background: #369fe6;
+  border: 0;
+  width: 100px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/*---Main Form Ends ---*/
+
+/*---Weather Display Table starts ---*/
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  margin-left: 150px;
+  margin-top: 50px;
+  width: 35%;
+}
+th {
+  background-color: #728692;
+  padding: 10px;
+}
+th:nth-child(even) {
+  border-right: 1px solid black;
+}
+tr:nth-child(even) {
+  border-right: 1px solid black;
+}
+tr:nth-child(odd) {
+  background-color: #5b85a1;
+}
+td {
+  text-align: center;
+  padding: 8px;
+  white-space: nowrap;
+  width: 30%;
+  vertical-align: middle;
+}
+
+.city {
+  border-right: 1px solid black;
+}
+.weatherIcon {
+  vertical-align: middle;
+}
+
+.saveBtn {
+  position: relative;
+  padding: 1px 5px;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: red;
+  color: white;
+}
+
+/*---Weather Display Table Ends ---*/
+
+/*---Footer Starts--*/
+footer {
+  background: #35424a;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  border-top: #5b85a1 30px solid;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 30px;
+  width: 100%;
+}
+/*---Footer Ends--*/
